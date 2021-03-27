@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7137D356260F324B003074ED /* RPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7137D355260F324B003074ED /* RPSController.m */; };
 		717DE037260AF0B60079759B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717DE036260AF0B60079759B /* main.swift */; };
 		717DE041260AF1210079759B /* RPSGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 717DE040260AF1210079759B /* RPSGame.m */; };
 		717DE044260AF12E0079759B /* RPSTurn.m in Sources */ = {isa = PBXBuildFile; fileRef = 717DE043260AF12E0079759B /* RPSTurn.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7137D355260F324B003074ED /* RPSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSController.m; sourceTree = "<group>"; };
+		7137D35C260F327A003074ED /* RPSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSController.h; sourceTree = "<group>"; };
 		717DE033260AF0B60079759B /* RPS_Practice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPS_Practice; sourceTree = BUILT_PRODUCTS_DIR; };
 		717DE036260AF0B60079759B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		717DE03E260AF0D80079759B /* RPSGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSGame.h; sourceTree = "<group>"; };
@@ -44,6 +47,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7137D358260F3252003074ED /* Turn */ = {
+			isa = PBXGroup;
+			children = (
+				717DE03F260AF0E90079759B /* RPSTurn.h */,
+				717DE043260AF12E0079759B /* RPSTurn.m */,
+			);
+			path = Turn;
+			sourceTree = "<group>";
+		};
+		7137D35A260F325D003074ED /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				717DE03E260AF0D80079759B /* RPSGame.h */,
+				717DE040260AF1210079759B /* RPSGame.m */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		7137D35D260F327D003074ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7137D355260F324B003074ED /* RPSController.m */,
+				7137D35C260F327A003074ED /* RPSController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		717DE02A260AF0B60079759B = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				717DE036260AF0B60079759B /* main.swift */,
-				717DE03E260AF0D80079759B /* RPSGame.h */,
-				717DE040260AF1210079759B /* RPSGame.m */,
-				717DE03F260AF0E90079759B /* RPSTurn.h */,
-				717DE043260AF12E0079759B /* RPSTurn.m */,
+				7137D35D260F327D003074ED /* Controller */,
+				7137D35A260F325D003074ED /* Game */,
+				7137D358260F3252003074ED /* Turn */,
 			);
 			path = RPS_Practice;
 			sourceTree = "<group>";
@@ -133,6 +162,7 @@
 				717DE037260AF0B60079759B /* main.swift in Sources */,
 				717DE041260AF1210079759B /* RPSGame.m in Sources */,
 				717DE044260AF12E0079759B /* RPSTurn.m in Sources */,
+				7137D356260F324B003074ED /* RPSController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
