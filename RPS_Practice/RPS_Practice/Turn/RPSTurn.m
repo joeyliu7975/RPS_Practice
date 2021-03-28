@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 #import "RPSTurn.h"
+
 
 @implementation RPSTurn
 
@@ -20,8 +22,33 @@
     return self;
 }
 
+-(instancetype)init {
+    self = [super init];
+    
+    if(self) {
+        _move = [self generateMove];
+    }
+    
+    return self;
+}
+
 -(Move)generateMove {
-    return Rock;
+    NSUInteger randomNumber = arc4random_uniform(3);
+    
+    switch(randomNumber) {
+        case 0:
+            return Rock;
+            break;
+        case 1:
+            return Paper;
+            break;
+        case 2:
+            return Scissor;
+            break;
+        default:
+            return Invalid;
+            break;
+    }
 }
 
 -(BOOL)defeats:(Play *)opponent {
