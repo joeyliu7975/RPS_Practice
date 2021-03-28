@@ -11,6 +11,10 @@
 
 @implementation RSPController : NSObject
 
--(void)throwDown:(Move) playersMove {}
+-(void)throwDown:(Move) playersMove {
+    // Here the RPSTurn class generates the opponent's move
+    RPSTurn *playerTurn = [[RPSTurn alloc]initWithMove:playersMove];
+    
+}
 
 @end
